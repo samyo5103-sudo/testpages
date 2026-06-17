@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Chaos</title>
+  <style>
+    body {
+      font-family: Comic Sans MS, cursive;
+      background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #333;
+    }
+    .joke {
+      margin: 20px;
+      font-size: 1.5em;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: #333;
+      color: white;
+    }
+    button:hover {
+      background: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚧 Welcome to My Totally Serious Website 🚧</h1>
+
+  <p class="joke">Loading productivity... please wait forever.</p>
+
+  <button onclick="tellJoke()">Click for a bad joke</button>
+
+  <p id="output" class="joke"></p>
+
+  <script>
+    const jokes = [
+      "Why do programmers prefer dark mode? Because light attracts bugs 🐛",
+      "I told my computer I needed a break… it said 'No problem — I’ll go to sleep.' 😴",
+      "There are 10 types of people: those who understand binary and those who don’t.",
+      "I would tell you a UDP joke… but you might not get it.",
+      "My code doesn’t have bugs… it has unexpected features."
+    ];
+
+    function tellJoke() {
+      const random = Math.floor(Math.random() * jokes.length);
+      document.getElementById("output").innerText = jokes[random];
+    }
+  </script>
+
+  <footer style="margin-top:50px;">
+    <p>© 2026 Definitely Not Copied from Stack Overflow</p>
+  </footer>
+</body>
+</html>
